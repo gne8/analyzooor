@@ -1,2 +1,2 @@
-max_datetime,min_datetime,total_transactions_count
-2023-10-13 18:18:34,2023-08-09 11:09:19,75
+max_datetime,min_datetime,total_transactions_count,total_unique_days,total_unique_month_years
+2023-10-13 18:18:34,2023-08-09 11:09:19,75,21,3

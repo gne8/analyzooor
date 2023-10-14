@@ -6,6 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+import random
 
 columns = [
     'amount', 'chain', 'credit_score', 'decimals', 'display_symbol', 'id',
@@ -23,7 +24,7 @@ col1, col2, col3 = st.columns(3)
 col1.image('analyzooor_logo.png', width=250, use_column_width=False)
 col2.title('Analyzooor')
 col2.markdown('*The analytics platform for meme lords*')
-tabs = st.selectbox("Choose a mode:", ["Lonely Pepe Mode", "Pepe vs Friends Mode"])
+tabs = st.selectbox("Choose a mode:", ["Lonely Pepe Mode", "Pepe vs Friends Mode", "Honorary Pepe-board"])
 
 if tabs == "Lonely Pepe Mode":
     if st.button('Connect Wallet'):
@@ -145,9 +146,15 @@ if tabs == "Lonely Pepe Mode":
                     ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
                     st.pyplot(fig, use_container_width=True)
 
+                image_choices = ['lonely_ape.jpg', 'lonely_clown.jpg', 'lonely_fool.jpg']
+                random_image = random.choice(image_choices)
+                st.title("The Wizard Pepe has granted you the title of:")
+                st.image(random_image, width=500)                                    
+
             except FileNotFoundError:
                 st.write("File not found.")
-else:
+
+elif tabs == 'Pepe vs Friends Mode':
     if st.button('Connect Wallet'):
         st.write('Wallet Connected!')
 
@@ -226,22 +233,121 @@ else:
                 st.write(f"File not found: {file_path2}")
 
             if total_amount > total_amount2:
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns(3)
 
                 with col1:
-                    st.title(f'{token_address} Portfolio Value: ${total_amount:,.2f}')
-                    st.image('goodlife.png', caption='Living the good life')
+                    st.markdown(
+                        f"""
+                        <div style='background-color: #FFFF99; padding: 0px; border-radius: 0px;'>
+                            <p style='font-weight: bold; color: black;'>{token_address} Portfolio Value: ${total_amount:,.2f}</p>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )                    
+                    # st.write(f'{token_address} Portfolio Value: ${total_amount:,.2f}')
+                    st.image('goodlife.png', width = 360, caption='Living the good life')
 
                 with col2:
-                    st.title(f'{opponent_address} Portfolio Value: ${total_amount2:,.2f}')
-                    st.image('downbad.png', caption='Down bad')
+                    st.image('vs_logo.png', width=380)                    
+
+                with col3:
+                    st.markdown(
+                        f"""
+                        <div style='background-color: #FFFF99; padding: 0px; border-radius: 0px;'>
+                            <p style='font-weight: bold; color: black;'>{opponent_address} Portfolio Value: ${total_amount2:,.2f}</p>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )                    
+                    # st.write(f'{opponent_address} Portfolio Value: ${total_amount2:,.2f}')
+                    st.image('downbad.png', width = 360, caption='Down bad')
             else:
-                col1, col2 = st.columns(2)
+                col1, col2, col3 = st.columns(3)
 
                 with col1:
-                    st.write(f'{token_address} Portfolio Value: ${total_amount:,.2f}')
-                    st.image('downbad.png', caption='Down bad')
+                    st.markdown(
+                        f"""
+                        <div style='background-color: #FFFF99; padding: 0px; border-radius: 0px;'>
+                            <p style='font-weight: bold; color: black;'>{token_address} Portfolio Value: ${total_amount:,.2f}</p>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )                       
+                    # st.write(f'{token_address} Portfolio Value: ${total_amount:,.2f}')
+                    st.image('downbad.png', width = 360, caption='Down bad')
 
                 with col2:
-                    st.write(f'{opponent_address} Portfolio Value: ${total_amount2:,.2f}')
-                    st.image('goodlife.png', caption='Living the good life')
+                    st.image('vs_logo.png', width=380)
+
+                with col3:
+                    st.markdown(
+                        f"""
+                        <div style='background-color: #FFFF99; padding: 0px; border-radius: 0px;'>
+                            <p style='font-weight: bold; color: black;'>{opponent_address} Portfolio Value: ${total_amount2:,.2f}</p>
+                        </div>
+                        """,
+                        unsafe_allow_html=True
+                    )                       
+                    # st.write(f'{opponent_address} Portfolio Value: ${total_amount2:,.2f}')
+                    st.image('goodlife.png', width = 360, caption='Living the good life')
+else:
+    st.title("Honorary Pepe-Board")
+    gas_spending = pd.read_csv('data/leaderboard/clean_gas_spent_leaderboard.csv')
+    txn_count = pd.read_csv('data/leaderboard/clean_txn_count_leaderboard.csv')
+
+# Search
+    token_address = st.text_input('Enter Token Address:')
+    token_address = token_address.strip().lower()  
+    search_button = st.button('Search')
+
+    if search_button:
+        filtered_gas_spending = gas_spending[gas_spending['tx_sender'].str.lower() == token_address]
+        filtered_txn_count = txn_count[txn_count['tx_sender'].str.lower() == token_address]
+
+        if not filtered_gas_spending.empty:
+            index_gas_spending = filtered_gas_spending.index[0]
+            st.write(f"You are ranked {index_gas_spending + 1} in the gas spending leaderboard for @0xMantle.")
+            gas_spending_tweet = f"I am ranked {index_gas_spending + 1} in the gas spending leaderboard for @0xMantle."
+        else:
+            st.write("You are not in the gas spending leaderboard for @0xMantle.")
+            gas_spending_tweet = "I am not on the gas spending leaderboard for @0xMantle."
+
+        if not filtered_txn_count.empty:
+            index_txn_count = filtered_txn_count.index[0]
+            st.write(f"You are ranked {index_txn_count + 1} in the transaction count leaderboard for @0xMantle.")
+            txn_count_tweet = f"I am ranked {index_txn_count + 1} in the transaction count leaderboard for @0xMantle."
+        else:
+            st.write("You are not in the transaction count leaderboard for @0xMantle.")
+            txn_count_tweet = "I am not on the transaction count leaderboard for @0xMantle."
+
+        if filtered_txn_count.empty and filtered_gas_spending.empty:
+            st.image('ngmi.jpg', width = 200)
+        else:
+            st.image('leader.jpg', width = 200)    
+
+        tweet_text = gas_spending_tweet if not filtered_gas_spending.empty else txn_count_tweet
+        tweet_url = f"https://twitter.com/intent/tweet?text={tweet_text}"
+
+        # Custom HTML div for Twitter share
+        st.markdown(
+            f"""
+            <div style='background-color: #add8e6; padding: 10px; border-radius: 5px;'>
+                <p style='font-weight: bold; color: black;'></p>
+                <a href='{tweet_url}' target='_blank'>
+                    Share on Twitter
+                </a>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )                  
+
+# Leaderboard
+    col1, col2 = st.columns(2)
+
+    with col1:
+        st.subheader("Top 10 Gas Spending")
+        st.dataframe(gas_spending.head(10))
+
+    with col2:
+        st.subheader("Top 10 Transaction Count")
+        st.dataframe(txn_count.head(10))

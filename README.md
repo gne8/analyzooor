@@ -5,8 +5,8 @@
 #### Tagline : Analysis + Meme Generator
 <img src="assets/analyzooor_fusion.jpeg" alt="analyzooor" width="200" height="300" class="center">
 
-#### The Problem to Solves
-Still scratching head for good memes? Search no longer meme lovers! We believe your on-chain activity is a meme. That inspired us to build **Analyzoor** to create memes based on your onchain activity, making analysis more funs and interactive!
+#### The Problem it solves
+Still scratching your head for good memes? Search no longer my fellow meme lovers! We believe your on-chain activity can be a meme. That inspired us to build **Analyzoor** to create memes based on your onchain activity, making analysis more fun and interactive!
 
 <img src="assets/pepe_meme.jpeg" alt="analyzooor" width="200" height="200" class="center">
 

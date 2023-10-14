@@ -3,11 +3,12 @@
 
 ## Description
 #### Tagline : Analysis + Meme Generator
-<img src="https://i.imgflip.com/82jxif.jpg" alt="analyzooor" width="200" height="300" class="center">
+<img src="assets/analyzooor_fusion.jpeg" alt="analyzooor" width="200" height="300" class="center">
 
 #### The Problem to Solves
 Still scratching head for good memes? Search no longer meme lovers! We believe your on-chain activity is a meme. That inspired us to build **Analyzoor** to create memes based on your onchain activity, making analysis more funs and interactive!
-<img src="https://i.imgflip.com/82k4e3.jpg" alt="onchain meme" width="200" height="200" class="center">
+<br>
+<img src="assets/pepe_meme.jpeg" alt="analyzooor" width="200" height="200" class="center">
 
 #### Challenges
 1. Lacking APIs for aggregated stats on Mantle, free APIs like DeBank have rate limits.
@@ -20,13 +21,19 @@ Still scratching head for good memes? Search no longer meme lovers! We believe y
 - Covalent Increment - for querying leaderboard data using SQL
 - imgflip - for meme generators
 
-#### Pictures
-<img src="assets/screenshot_1.png">
-<img src="assets/screenshot_2.png">
+## Pictures
+#### Selections Menu
 <img src="assets/screenshot_3.png">
-<img src="assets/screenshot_4.png">
-<img src="assets/screenshot_5.png">
+#### Lonely Pepe Mode: Wallet Stats
+<img src="assets/screenshot_2.png">
+#### Lonely Pepe Mode: Twitter Sharing Feature
 <img src="assets/screenshot_6.png">
+#### Pepe VS Friend Mode: It's a Battle!
+<img src="assets/screenshot_1.png">
+#### Honorary Pepe-Board: What a Lenged!
+<img src="assets/screenshot_4.png">
+#### Honorary Pepe-Board: Top Leaderboard
+<img src="assets/screenshot_5.png">
 
 ## Setup
 ### [Prerequisite] Prepare .env file

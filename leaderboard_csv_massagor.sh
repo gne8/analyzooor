@@ -1,0 +1,2 @@
+awk 'NR==1{print $0; next} {print "0X" $0}' data/leaderboard/txn_count_leaderboard.csv > data/leaderboard/clean_txn_count_leaderboard.csv
+awk 'NR==1{print $0; next} {print "0X" $0}' data/leaderboard/gas_spent_leaderboard.csv > data/leaderboard/clean_gas_spent_leaderboard.csv

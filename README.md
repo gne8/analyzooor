@@ -7,7 +7,7 @@
 
 #### The Problem to Solves
 Still scratching head for good memes? Search no longer meme lovers! We believe your on-chain activity is a meme. That inspired us to build **Analyzoor** to create memes based on your onchain activity, making analysis more funs and interactive!
-<br>
+
 <img src="assets/pepe_meme.jpeg" alt="analyzooor" width="200" height="200" class="center">
 
 #### Challenges
@@ -24,23 +24,18 @@ Still scratching head for good memes? Search no longer meme lovers! We believe y
 ## Pictures
 #### Selections Menu
 <img src="assets/screenshot_3.png">
-<br>
 
 #### Lonely Pepe Mode: Wallet Stats
 <img src="assets/screenshot_2.png">
-<br>
 
 #### Lonely Pepe Mode: Twitter Sharing Feature
 <img src="assets/screenshot_6.png">
-<br>
 
 #### Pepe VS Friend Mode: It's a Battle!
 <img src="assets/screenshot_1.png">
-<br>
 
 #### Honorary Pepe-Board: What a Lenged!
 <img src="assets/screenshot_4.png">
-<br>
 
 #### Honorary Pepe-Board: Top Leaderboard
 <img src="assets/screenshot_5.png">

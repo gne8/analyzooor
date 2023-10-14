@@ -34,7 +34,7 @@ Still scratching head for good memes? Search no longer meme lovers! We believe y
 #### Pepe VS Friend Mode: It's a Battle!
 <img src="assets/screenshot_1.png">
 
-#### Honorary Pepe-Board: What a Lenged!
+#### Honorary Pepe-Board: What a Legend!
 <img src="assets/screenshot_4.png">
 
 #### Honorary Pepe-Board: Top Leaderboard

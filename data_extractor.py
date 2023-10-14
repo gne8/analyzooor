@@ -16,10 +16,11 @@ proxies = {
 
 # Test Random Address
 address_list = [
-    '0xCa6868F11a099295Fe7F3BDD705d2d7a1c2214B7',
-    '0x665E32B4B787637D34b8526F7618e4A441635996',
-    '0xb3821AB318a13D0fBd3B3F5090dc1Bf01BA928b6',
-    '0x746eD74c3F0110a130E7bf464ADfDf51da3a8FE4'
+    os.getenv("ADDRESS_1"),
+    os.getenv("ADDRESS_2"),
+    os.getenv("ADDRESS_3"),
+    os.getenv("ADDRESS_4"),
+    os.getenv("ADDRESS_5")
 ]
 
 def call_debank_api_and_write_csv(address='',proxies='',token_csv='',protocol_csv=''):

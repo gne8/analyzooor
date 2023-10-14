@@ -7,7 +7,8 @@ address_list = [
     os.getenv("ADDRESS_1"),
     os.getenv("ADDRESS_2"),
     os.getenv("ADDRESS_3"),
-    os.getenv("ADDRESS_4")
+    os.getenv("ADDRESS_4"),
+    os.getenv("ADDRESS_5")
 ]
 
 def basic_stats_extractor(df):

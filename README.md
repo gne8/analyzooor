@@ -29,13 +29,16 @@ Still scratching your head for good memes? Search no longer my fellow meme lover
 <img src="assets/screenshot_2.png">
 
 #### Lonely Pepe Mode: Twitter Sharing Feature
-<img src="assets/screenshot_6.png">
+<img src="assets/screenshot_7.png">
 
 #### Pepe VS Friend Mode: It's a Battle!
 <img src="assets/screenshot_1.png">
 
 #### Honorary Pepe-Board: What a Legend!
 <img src="assets/screenshot_4.png">
+
+#### Honorary Pepe-Board: Share on Twitter!
+<img src="assets/screenshot_6.png">
 
 #### Honorary Pepe-Board: Top Leaderboard
 <img src="assets/screenshot_5.png">

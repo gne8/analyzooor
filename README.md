@@ -6,3 +6,9 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt --upgrade
 ```
+
+### To run streamlit
+```bash
+source venv/bin/activate
+streamlit run streamlit.py
+```
